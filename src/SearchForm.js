@@ -1,23 +1,37 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
 
-export const SearchForm = () => {
+export const SearchForm = ({ handleFilterSearch }) => {
+    const [searchForm, setSearchForm] = useState('');
+
+    const handleChange = evt => {
+        setSearchForm(evt.target.value);
+    };
+
+    const handleSubmit = evt => {
+        evt.preventDefault();
+        handleFilterSearch(searchForm);
+        setSearchForm('');
+    };
+
     return (
         <div className='flex items-center mx-10 mt-8'>
             <form
-                action=''
                 className='flex mx-6 md:mx-auto md:max-w-5xl w-full my-4 min-w-fit'
+                onSubmit={handleSubmit}
             >
                 <input
                     className='shrink-0 grow p-2 border border-black rounded-lg w-2/3'
                     type='text'
+                    name='searchForm'
+                    id='searchForm'
+                    value={searchForm}
                     placeholder='Enter search term...'
+                    onChange={handleChange}
                 />
-                <NavLink exact to='/signup' className='no-underline text-white'>
-                    <button className='p-2 rounded w-20 bg-blue-500 hover:scale-105 hover:bg-blue-600 mb-3 right-2 h-full'>
-                        Submit
-                    </button>
-                </NavLink>
+
+                <button className='p-2 rounded w-20 bg-blue-500 hover:scale-105 hover:bg-blue-600 mb-3 right-2 h-full no-underline text-white'>
+                    Submit
+                </button>
             </form>
         </div>
     );

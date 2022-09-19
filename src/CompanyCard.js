@@ -13,8 +13,8 @@ export const CompanyCard = ({ name, description, logoUrl }) => {
                     {description}
                 </p>
             </div>
-            {/* Logo */}
 
+            {/* Logo */}
             <div className='p-4 w-36 ml-auto relative'>
                 {logoUrl ? (
                     <img
