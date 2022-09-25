@@ -28,6 +28,18 @@ export const NavBar = () => {
                     >
                         Sign Up
                     </NavLink>
+                    <NavLink
+                        to='/companies'
+                        className='text-xl no-underline text-blue-500 hover:text-blue-600'
+                    >
+                        Companies
+                    </NavLink>
+                    <NavLink
+                        to='/jobs'
+                        className='text-xl no-underline text-blue-500 hover:text-blue-600'
+                    >
+                        Jobs
+                    </NavLink>
                 </div>
             </header>
         </div>

@@ -16,7 +16,7 @@ export const SearchForm = ({ handleFilterSearch }) => {
     return (
         <div className='flex items-center mx-10 mt-8'>
             <form
-                className='flex mx-6 md:mx-auto md:max-w-5xl w-full my-4 min-w-fit'
+                className='flex  mx-auto md:max-w-5xl w-full my-4 min-w-fit'
                 onSubmit={handleSubmit}
             >
                 <input
@@ -29,7 +29,7 @@ export const SearchForm = ({ handleFilterSearch }) => {
                     onChange={handleChange}
                 />
 
-                <button className='p-2 rounded w-20 bg-blue-500 hover:scale-105 hover:bg-blue-600 mb-3 right-2 h-full no-underline text-white'>
+                <button className='p-2 rounded w-20 bg-blue-500 hover:scale-105 hover:bg-blue-600  right-2 h-full no-underline text-white transition ease-in-out duration-200'>
                     Submit
                 </button>
             </form>

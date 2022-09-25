@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { Home } from './Home';
 import { CompanyList } from './CompanyList';
 import { CompanyDetails } from './CompanyDetails';
@@ -16,7 +16,7 @@ export const AppRoutes = () => {
             <Route path='/companies' element={<CompanyList />}></Route>
             <Route path='/companycard' element={<CompanyCard />}></Route>
             <Route
-                path='/companies/:company'
+                path='/companies/:handle'
                 element={<CompanyDetails />}
             ></Route>
             <Route path='/jobs' element={<Jobs />}></Route>
