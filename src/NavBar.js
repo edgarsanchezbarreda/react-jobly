@@ -16,7 +16,6 @@ export const NavBar = ({ logout }) => {
     };
 
     const loggedOut = () => {
-        console.log('logged Out!');
         return (
             <div className='flex items-center justify-center space-x-4 md:space-x-10 md:absolute top-12 right-10 '>
                 <NavLink
@@ -36,7 +35,6 @@ export const NavBar = ({ logout }) => {
     };
 
     const loggedIn = () => {
-        console.log('logged In!');
         return (
             <div className='flex items-center justify-center space-x-4 md:space-x-10 md:absolute top-12 right-10 '>
                 <NavLink

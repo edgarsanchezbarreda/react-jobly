@@ -40,7 +40,7 @@ function App() {
                 if (token) {
                     try {
                         let { username } = jwt(token);
-                        console.log(username);
+
                         // put the token on the Api class so it can use it to call the API.
                         JoblyApi.token = token;
                         let currentUser = await JoblyApi.getCurrentUser(
@@ -113,7 +113,6 @@ function App() {
         if (hasAppliedToJob(id)) return;
         JoblyApi.applyToJob(currentUser.username, id);
         setApplicationIds(new Set([...applicationIds, id]));
-        console.log(applicationIds);
     }
 
     if (!infoLoaded) return <LoadingSpinner />;

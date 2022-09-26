@@ -24,7 +24,6 @@ export const Login = ({ login }) => {
         evt.preventDefault();
         let result = await login(formData);
         if (result.success) {
-            console.log('success');
             navigate('/companies');
         } else {
             setFormErrors(result.errors);
