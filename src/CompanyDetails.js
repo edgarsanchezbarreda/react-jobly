@@ -24,7 +24,6 @@ export const CompanyDetails = () => {
         };
         getCompany();
     }, []);
-    console.log(company);
 
     return (
         <div className='CompanyDetails'>
@@ -35,6 +34,8 @@ export const CompanyDetails = () => {
 
             {company.jobs?.map(job => (
                 <JobCard
+                    key={job.id}
+                    id={job.id}
                     title={job.title}
                     salary={job.salary}
                     equity={job.equity}

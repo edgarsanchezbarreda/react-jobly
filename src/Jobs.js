@@ -36,6 +36,7 @@ export const Jobs = () => {
                 {jobs.length > 0 ? (
                     jobs.map(job => (
                         <JobCard
+                            id={job.id}
                             title={job.title}
                             salary={job.salary}
                             equity={job.equity}
